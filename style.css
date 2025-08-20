@@ -131,6 +131,55 @@ h2 {
   opacity: 0.7;
 }
 
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  min-height: 45vh;
+  padding: 20px;
+}
+
+.project-container div {
+  flex: 1 1 300px; /* flexible width with minimum size */
+  max-width: 350px; /* prevent cards from stretching too wide */
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+.project-container div:hover {
+  box-shadow: 10px 10px 5px #aaaaaa;
+}
+
+.project-container ul {
+  text-align: start;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+
+.project-container a {
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 8px 14px;
+  background-color: #3a3a3a;
+  border-radius: 9px;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.project-container a:hover {
+  opacity: 0.7;
+}
+
+.project-container a:active {
+  opacity: 0.4;
+}
+
 /* 🔹 Responsive Breakpoints */
 
 /* Tablets */
@@ -142,6 +191,16 @@ h2 {
   .skills-container {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+  .project-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-container div {
+    width: 100%;
+    max-width: 90%;
+    height: auto; /* let height adjust naturally */
   }
 }
 
@@ -161,5 +220,21 @@ h2 {
   }
   h2 {
     font-size: 2rem;
+  }
+  .project-container div {
+    padding: 15px;
+  }
+
+  .project-container h3 {
+    font-size: 1.2rem;
+  }
+
+  .project-container p {
+    font-size: 0.95rem;
+  }
+
+  .project-container a {
+    padding: 6px 12px;
+    font-size: 0.9rem;
   }
 }
