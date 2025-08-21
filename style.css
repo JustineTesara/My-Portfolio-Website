@@ -167,6 +167,9 @@ h2 {
   text-align: center;
   line-height: 1.5;
   transition: all 0.3s;
+  display: flex; /* make card content flexible */
+  flex-direction: column; /* stack items top to bottom */
+  justify-content: space-between; /* push button to bottom */
 }
 
 .project-container div:hover {
@@ -255,3 +258,4 @@ h2 {
     font-size: 0.9rem;
   }
 }
+
