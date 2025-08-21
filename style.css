@@ -49,6 +49,7 @@ body {
 }
 .col {
   width: 100%;
+  line-height: 1.5;
 }
 .profile-pic img {
   border-radius: 50%;
