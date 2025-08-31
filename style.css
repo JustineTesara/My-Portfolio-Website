@@ -15,6 +15,11 @@ body {
   align-items: center;
   overflow: hidden;
 }
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #555;
+}
 
 /* Background design */
 .bg-design {
@@ -130,13 +135,13 @@ h2 {
 
 .footer {
   background-color: #3a3a3a;
-  padding: 2rem 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  color: #d9d9d9;
+  color: #fff;
 }
 .footer p {
   font-size: 0.9rem;
@@ -171,6 +176,14 @@ h2 {
 .link-container a:hover {
   opacity: 0.7;
 }
+.link-container a svg {
+  transition: transform 0.3s, fill 0.3s;
+}
+
+.link-container a:hover svg {
+  transform: scale(1.2);
+  fill: #f06933;
+}
 
 .project-container {
   display: flex;
@@ -186,18 +199,20 @@ h2 {
   flex: 1 1 300px; /* flexible width with minimum size */
   max-width: 350px; /* prevent cards from stretching too wide */
   padding: 20px;
-  background-color: #f1f1f1;
-  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
   text-align: center;
   line-height: 1.5;
-  transition: all 0.3s;
   display: flex; /* make card content flexible */
   flex-direction: column; /* stack items top to bottom */
   justify-content: space-between; /* push button to bottom */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-container div:hover {
-  box-shadow: 10px 10px 5px #aaaaaa;
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-container ul {
