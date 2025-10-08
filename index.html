@@ -5,23 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Justine Tesara | Portfolio</title>
     <link
-      rel="icon"
-      type="image/x-icon"
-      href="Pictures/favicon_io/apple-touch-icon.png"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
-
-  <body class="bg-light font-inter">
+  <body>
     <main class="container">
       <!-- Sidebar -->
       <aside class="sidebar">
@@ -30,7 +19,6 @@
           alt="Profile Picture"
           class="profile-pic"
         />
-
         <h1 class="name">Justine Tesara</h1>
         <p class="role">Aspiring Developer</p>
 
@@ -39,31 +27,36 @@
           <a
             href="https://web.facebook.com/justine.riosa.tesara"
             target="_blank"
-            ><i class="fab fa-facebook-f"></i
-          ></a>
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
           <a
             href="https://www.linkedin.com/in/justine-tesara-a59674318/"
             target="_blank"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a href="https://github.com/JustineTesara" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://github.com/JustineTesara" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
         </div>
 
         <!-- Contact -->
         <div class="contact">
-          <div><i class="fas fa-phone-alt"></i><span>+63 9519534672</span></div>
           <div>
-            <i class="fas fa-envelope"></i
-            ><span>justine.tesara0907@gmail.com</span>
+            <i class="fas fa-phone-alt"></i>
+            <span>+63 9519534672</span>
+          </div>
+          <div>
+            <i class="fas fa-envelope"></i>
+            <span>justine.tesara0907@gmail.com</span>
           </div>
         </div>
 
         <!-- Resume -->
-        <a href="/Resume/JUSTINE_TESARA_CV.pdf" download class="resume-btn"
-          >Download Resume</a
-        >
+        <a href="/Resume/JUSTINE_TESARA_CV.pdf" download class="resume-btn">
+          Download Resume
+        </a>
       </aside>
 
       <!-- Content -->
@@ -81,7 +74,7 @@
           <p class="section-text">
             Hello. I'm a fresh graduate in Information Technology with a passion
             for programming and web development. Tech-savvy, eager to learn, and
-            motivated to apply my skills in real-world projects, I’m seeking
+            motivated to apply my skills in real-world projects, I'm seeking
             opportunities as a programmer, software developer, or web developer
             to grow and contribute to a professional team.
           </p>
@@ -93,42 +86,52 @@
           <div class="projects-grid">
             <!-- Project Card -->
             <div class="project-card">
-              <img
-                src="Pictures/journal-site.png"
-                alt="My Journal Blog Site"
-                class="project-img"
-              />
-              <h3 class="project-title">Journal Blog Site</h3>
-              <p class="project-text">
-                A simple Journal Blog Site where users can create and publish
-                their own journal entries. This project is built using Node.js,
-                Express.js, EJS, and CSS3.
-              </p>
-              <a
-                href="https://github.com/JustineTesara/Journal-Blog-Site"
-                target="_blank"
-                class="project-link"
-                >View Project →</a
-              >
+              <div class="project-img-wrapper">
+                <img
+                  src="Pictures/journal-site.png"
+                  alt="My Journal Blog Site"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Journal Blog Site</h3>
+                <p class="project-text">
+                  A simple Journal Blog Site where users can create and publish
+                  their own journal entries. This project is built using
+                  Node.js, Express.js, EJS, and CSS3.
+                </p>
+                <a
+                  href="https://github.com/JustineTesara/My-Journal-Blog-Site"
+                  target="_blank"
+                  class="project-link"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
 
             <div class="project-card">
-              <img
-                src="Pictures/financial-tracker.png"
-                alt="Finance Tracker"
-                class="project-img"
-              />
-              <h3 class="project-title">Personal Finance Tracker</h3>
-              <p class="project-text">
-                A web app that helps users manage income, expenses, and balance
-                in real-time.
-              </p>
-              <a
-                href="https://justinetesara.github.io/My-Personal-Finance-Tracker/"
-                target="_blank"
-                class="project-link"
-                >View Project →</a
-              >
+              <div class="project-img-wrapper">
+                <img
+                  src="Pictures/financial-tracker.png"
+                  alt="Finance Tracker"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-content">
+                <h3 class="project-title">Personal Finance Tracker</h3>
+                <p class="project-text">
+                  A web app that helps users manage income, expenses, and
+                  balance in real-time.
+                </p>
+                <a
+                  href="https://justinetesara.github.io/My-Personal-Finance-Tracker/"
+                  target="_blank"
+                  class="project-link"
+                >
+                  View Project <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -159,5 +162,3 @@
     </main>
   </body>
 </html>
-
-
