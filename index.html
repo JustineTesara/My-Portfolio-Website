@@ -9,6 +9,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
   </head>
   <body>
     <main class="container">
@@ -40,7 +44,6 @@
             <i class="fab fa-github"></i>
           </a>
         </div>
-
         <!-- Contact -->
         <div class="contact">
           <div>
@@ -70,6 +73,7 @@
           <a href="#about"><i class="fas fa-home"></i> Home</a>
           <a href="#projects"><i class="fas fa-laptop-code"></i> Projects</a>
           <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+          <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
 
         <!-- About -->
@@ -157,26 +161,252 @@
         <div id="skills" class="section">
           <h2 class="section-title">My Skills</h2>
           <div class="skills-grid">
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('skillModal1')">
               <h4>Programming</h4>
               <p>Python, Java, JavaScript</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('skillModal2')">
               <h4>Web Development</h4>
               <p>HTML, CSS, JavaScript, Node.js</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('skillModal3')">
               <h4>Problem Solving</h4>
               <p>Logical thinking & creativity</p>
             </div>
-            <div class="skill-card">
+            <div class="skill-card" onclick="openModal('skillModal4')">
               <h4>Eager to Learn</h4>
               <p>Adaptable and motivated</p>
             </div>
+            <div class="skill-card" onclick="openModal('skillModal5')">
+              <h4>Tools & Technologies</h4>
+              <p>
+                MySQL, Git, GitHub, Visual Studio Code, Netbeans, Figma or
+                Canva, Postman, JDBC
+              </p>
+            </div>
+            <div class="skill-card" onclick="openModal('skillModal6')">
+              <h4>Other IT Skills</h4>
+              <p>
+                Troubleshooting, Software Installation, Hardware Setup, Basic
+                Networking, UI/UX (Basic)
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Contact -->
+        <div id="contact" class="section">
+          <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form id="contactForm">
+              <input type="text" id="title" placeholder="Subject" required />
+              <input type="text" id="name" placeholder="Your Name" required />
+              <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                id="message"
+                placeholder="Your Message"
+                required
+              ></textarea>
+              <button type="submit">Send Message</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
+    <!-- Skills Modal 1 - Programming -->
+    <div
+      id="skillModal1"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal1')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal1')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Programming Skills</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <p class="modal-description">
+            I have basic knowledge of Python, but I am very eager and willing to
+            learn more, especially in scripting and automation. In Java, I have
+            experience creating Swing GUI projects, connecting them to a
+            database, and applying strong logic and problem-solving skills. I am
+            also currently learning JavaScript and working to master important
+            programming concepts. Overall, I have experience with multiple
+            programming languages and I'm comfortable with OOP, data structures,
+            and algorithms.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal 2 - Web Development -->
+    <div
+      id="skillModal2"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal2')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal2')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Web Development</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">HTML5</span>
+            <span class="tech-tag">CSS3</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Express.js</span>
+          </div>
+          <p class="modal-description">
+            I am an entry-level developer currently learning APIs and working
+            toward becoming a full-stack developer. I have experience in
+            front-end development using HTML, CSS, and JavaScript to create
+            responsive and user-friendly websites. I am also studying backend
+            development with Node.js and Express.js, allowing me to build
+            RESTful APIs, handle server-side functions, and start creating
+            full-stack applications.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal 3 - Problem Solving -->
+    <div
+      id="skillModal3"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal3')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal3')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Problem Solving</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">Logical Thinking</span>
+            <span class="tech-tag">Creativity</span>
+            <span class="tech-tag">Analytical Mindset</span>
+          </div>
+          <p class="modal-description">
+            I approach challenges with a systematic and analytical mindset,
+            breaking down complex problems into manageable components. My
+            problem-solving approach combines logical thinking with creative
+            solutions, allowing me to debug code effectively, optimize
+            performance, and find innovative approaches to technical challenges.
+            I'm comfortable researching solutions and learning new concepts to
+            overcome obstacles.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal 4 - Eager to Learn -->
+    <div
+      id="skillModal4"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal4')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal4')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Eager to Learn</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">Adaptable</span>
+            <span class="tech-tag">Motivated</span>
+            <span class="tech-tag">Self-Learner</span>
+          </div>
+          <p class="modal-description">
+            As a fresh graduate, I'm highly motivated to continuously expand my
+            skill set and stay updated with the latest technologies and industry
+            trends. I'm adaptable to new environments and quick to learn new
+            frameworks, tools, and methodologies. I actively seek feedback and
+            view every project as an opportunity to grow both technically and
+            professionally.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal 5 - Tools & Technologies -->
+    <div
+      id="skillModal5"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal5')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal5')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Tools & Technologies</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">MySQL</span>
+            <span class="tech-tag">Git</span>
+            <span class="tech-tag">GitHub</span>
+            <span class="tech-tag">VS Code</span>
+            <span class="tech-tag">NetBeans</span>
+            <span class="tech-tag">Figma</span>
+            <span class="tech-tag">Canva</span>
+            <span class="tech-tag">Postman</span>
+            <span class="tech-tag">JDBC</span>
+          </div>
+          <p class="modal-description">
+            I'm proficient with various development tools and technologies. I
+            use MySQL for database management and JDBC for database
+            connectivity. For version control and collaboration, I utilize Git
+            and GitHub. My development environment includes Visual Studio Code
+            for web development and NetBeans for Java projects. I also use
+            Postman for API testing and development, and Figma/Canva for basic
+            UI/UX design and prototyping.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Modal 6 - Other IT Skills -->
+    <div
+      id="skillModal6"
+      class="modal"
+      onclick="closeModalOnOutside(event, 'skillModal6')"
+    >
+      <div class="modal-content">
+        <div class="modal-close" onclick="closeModal('skillModal6')">
+          <i class="fas fa-times"></i>
+        </div>
+        <div class="modal-body">
+          <h2 class="modal-title">Other IT Skills</h2>
+          <div class="modal-tech">
+            <span class="tech-tag">Troubleshooting</span>
+            <span class="tech-tag">Software Installation</span>
+            <span class="tech-tag">Hardware Setup</span>
+            <span class="tech-tag">Basic Networking</span>
+            <span class="tech-tag">UI/UX Basics</span>
+          </div>
+          <p class="modal-description">
+            Beyond programming, I possess a well-rounded set of IT skills. I'm
+            capable of troubleshooting software and hardware issues, performing
+            software installations and configurations, and setting up hardware
+            components. I have a basic understanding of networking concepts and
+            protocols. Additionally, I have foundational knowledge in UI/UX
+            design principles, which helps me create user-friendly interfaces
+            and understand the importance of user experience in application
+            development.
+          </p>
+        </div>
+      </div>
+    </div>
 
     <!-- Modal 1 -->
     <div
@@ -209,7 +439,7 @@
             functionality.
           </p>
           <a
-            href="https://github.com/JustineTesara/Journal-Blog-Site"
+            href="https://github.com/JustineTesara/My-Journal-Blog-Site"
             target="_blank"
             class="modal-link"
           >
@@ -302,4 +532,3 @@
     <script src="script.js"></script>
   </body>
 </html>
-
